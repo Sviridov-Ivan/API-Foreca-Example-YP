@@ -45,8 +45,23 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+
     implementation("com.google.code.gson:gson:2.10.1")
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    val retrofitVersion = "2.9.0"
+
+    implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
+    implementation("com.squareup.retrofit2:converter-gson:$retrofitVersion")
+
+    // Адаптер для RxJava2 и Retrofit
+    implementation("com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion")
+
+    // Зависимость на RxJava
+    implementation("io.reactivex.rxjava2:rxjava:2.2.21")
+// Зависимость на RxAndroid
+    implementation("io.reactivex.rxjava2:rxandroid:2.1.1")
 
 }
